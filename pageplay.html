@@ -1,0 +1,49 @@
+<html>
+
+<body>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+  <center>
+    <script>
+      values = [];
+
+      function addRecord() {
+        var inp = document.getElementById('inputtext');
+        values.push(inp.value);
+      
+      }
+
+      function displayRecord() {
+        document.getElementById("values").innerHTML = values.join(", ");
+      }
+    </script>
+    <table>
+      <tr>
+        <td>Enter the Input</td>
+        <td><input type="text" id="inputtext" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="button" id="add" onclick="addRecord();">Add </button>
+          <button type="button" id="display" onclick="displayRecord();">Display</button>
+        </td>
+      </tr>
+    </table>
+
+    <div id='values'></div>
+  </center>
+
+  <center>
+    <p id="one"></p>
+    <button onclick="random()">Random</button>
+    <script>
+      function random() {
+        document.getElementById("one").innerHTML = Math.floor(Math.random() * 10);
+      }
+    </script>
+  </center>
+
+
+</body>
