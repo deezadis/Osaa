@@ -6,39 +6,74 @@
   <title>หน้าแรก</title>
 
 
+  <style>
+    .button {
+      border-radius: 12px;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 15%;
+    }
 
+    .button1:active {
+      background-color: #19ABB3;
+      box-shadow: 0 5px #00B3A0;
+      transform: translateY(4px);
+    }
+
+    .button2:active {
+      background-color: #FF7230;
+      box-shadow: 0 5px #B34410;
+      transform: translateY(4px);
+    }
+
+    .button1 {
+      background-color: #49CFFF;
+    }
+
+    /* Blue */
+    .button2 {
+      background-color: #FF5000;
+    }
+
+    /* Red */
+  </style>
 
 </head>
-
-<body{
-    background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+<style>
+  body {
+    background-image: url('https://wallpapercave.com/wp/wp2757874.gif');
     background-size: cover;
-
-
-
     height: 100vh;
-    padding:0;
-    margin:0;
-}
->
+    padding: 0;
+    margin: 0;
+  }
+</style>
 
 
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br>
-  <center>
-    <form action="pageplay.html" method="post" name="form1">
-      <input name="btnSubmit" type="submit" value="Enter to Play">
-    </form>
-  </center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<center>
+  <form action="pageplay.html" method="post" name="form1">
+    <input type="submit" class="button button1" value="Enter to Play">
+  </form>
+</center>
 
-  <br>
-  <center>
-    <form action="cg.java" method="post" name="form1">
-      <input name="btnSubmit" type="submit" value="Enter ช่วยสอน">
-    </form>
-  </center>
+<br>
+<center>
+  <form action="cg.java" method="post" name="form1">
+    <input type="submit" class="button button2" value="Enter ช่วยสอน">
+  </form>
+</center>
 
 </body>
 
 </html>
+
