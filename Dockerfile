@@ -1,5 +1,5 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html\
+COPY . /usr/share/nginx/html
 FROM node:boron
 RUN mkdir -p/user/src/app
 WORKDIR packge.json /usr/src/app
