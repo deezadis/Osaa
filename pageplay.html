@@ -95,8 +95,8 @@
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    background-color: #35459E;
-    color: BLACK;
+    background-color: #404040;
+    color: white;
     border: 1px solid #BF0B3B;
     border-radius: 4px;
     font-size: 20px;
@@ -118,7 +118,8 @@
     }
 
     function displayRecord() {
-      document.getElementById("data").innerHTML = values.join(", "); //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
+      document.getElementById("data").innerHTML = values+"," //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
+                                                 //values.join(", ");
     }
 
     function reset() {
