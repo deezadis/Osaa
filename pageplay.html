@@ -1,5 +1,67 @@
 <html>
 
+
+<style>
+  .button {
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 10%;
+  }
+
+  .button1:active {
+    background-color: #6B67FF;
+    box-shadow: 0 5px #0030B3;
+    transform: translateY(4px);
+    width: 11%;
+  }
+
+  .button2:active {
+    background-color: #FF7230;
+    box-shadow: 0 5px #B34410;
+    transform: translateY(4px);
+    width: 11%;
+  }
+
+  .button3:active {
+    background-color: #6CFF69;
+    box-shadow: 0 5px #70FFBB;
+    transform: translateY(4px);
+    width: 11%;
+  }
+
+  .button4:active {
+    background-color: #E7E84C;
+    box-shadow: 0 5px #FBFF87;
+    transform: translateY(4px);
+    width: 11%;
+  }
+
+  .button1 {
+    background-color: #0294A5;
+  }
+
+  .button2 {
+    background-color: #F4874B;
+  }
+
+  .button3 {
+    background-color: #0ABDA0;
+  }
+
+  .button4 {
+    background-color: #FFDF00;
+  }
+</style>
+
+
 <style>
   body {
     background-image: url('https://wallpapercave.com/wp/wp2757874.gif');
@@ -9,54 +71,86 @@
     margin: 0;
   }
 </style>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<style>
+  h1 {
+    color: 99CDFF;
+  }
+
+  h2 {
+    color: 99CDFF;
+  }
+</style>
+
+
+<style>
+  input[type=text] {
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #35459E;
+    color: white;
+    border: 1px solid #BF0B3B;
+    border-radius: 4px;
+  }
+</style>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<center>
+  <script>
+    var values = [];
+
+    function addRecord() {
+      var inp = document.getElementById('inputtext'); //แปลงก่อนใส่array
+      values.push(inp.value); //ใส่array
+      inp.value = ""; //กรอกข้อมูลแล้วเมื่อ add จะบข้อมูลนั้น
+    }
+
+    function displayRecord() {
+      document.getElementById("data").innerHTML = values.join(", "); //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
+    }
+
+    function reset() {
+      values = [];
+      document.getElementById("data").innerHTML = " ";
+    }
+  </script>
 
 
 
-  <center>
-    <script>
-      var values = [];
-
-      function addRecord() {
-        var inp = document.getElementById('inputtext'); //แปลงก่อนใส่array
-        values.push(inp.value); //ใส่array
-        inp.value = ""; //กรอกข้อมูลแล้วเมื่อ add จะบข้อมูลนั้น
-      }
-
-      function displayRecord() {
-        document.getElementById("values").innerHTML = values.join(", "); //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
-      }
-    </script>
-
-    <table>
-
-      <td>Enter the Input</td>
-      <td><input type="text" id="inputtext" /></td>
+  <table>
+    <h1>ใส่ข้อมูล</h1>
+    <center>
+      <input type="text" id="inputtext" />
       <!ช่องกรอกข้อมูล>
+    </center>
+    <button type="button" class="button button1" onclick="addRecord();">Add </button>
+    <button type="button" class="button button2" onclick="displayRecord();">Display</button>
+    <button type="button" class="button button4" onclick="reset();">clear</button>
+  </table>
+  <h1 id='data'></h1>
 
-        <tr>
-          <td></td>
-          <td><button type="button" id="add" onclick="addRecord();">Add </button>
-            <button type="button" id="display" onclick="displayRecord();">Display</button>
-          </td>
-        </tr>
-    </table>
-    <div id='values'></div>
-  </center>
 
-  <br><br>
 
-  <center>
-    <button type="button" id="random" onclick="random()">Random</button>
-    <script>
-      function random() {
+</center>
+<br><br>
 
-        document.getElementById("printans").innerHTML = values[Math.floor(Math.random()*values.length)]
-      }
-    </script>
 
-    <p id="printans"></p>
-  </center>
+<center>
+  <button type="button" class="button button3" onclick="random()">Random</button>
+  <script>
+    function random() {
+      document.getElementById("printans").innerHTML = values[Math.floor(Math.random() * values.length)]
+    }
+  </script>
+  <h2 id="printans"></h2>
+</center>
 
 
 </body>
