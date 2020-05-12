@@ -1,162 +1,167 @@
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>LUCKY RANDOM</title>
-</head>
-
-<style>
-  .button {
-    border-radius: 12px;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-    width: 8%;
-  }
-
-  .button1:active {
-    background-color: #6B67FF;
-    box-shadow: 0 5px #0030B3;
-    transform: translateY(4px);
-    width: 9%;
-  }
-
-  .button2:active {
-    background-color: #FF7230;
-    box-shadow: 0 5px #B34410;
-    transform: translateY(4px);
-    width: 9%;
-  }
-
-  .button3:active {
-    background-color: #6CFF69;
-    box-shadow: 0 5px #70FFBB;
-    transform: translateY(4px);
-    width: 9%;
-  }
-
-  .button4:active {
-    background-color: #E7E84C;
-    box-shadow: 0 5px #FBFF87;
-    transform: translateY(4px);
-    width: 9%;
-  }
-
-  .button1 {
-    background-color: #0294A5;
-  }
-
-  .button2 {
-    background-color: #F4874B;
-  }
-
-  .button3 {
-    background-color: #0ABDA0;
-  }
-
-  .button4 {
-    background-color: #FFDF00;
-  }
-</style>
+<body>
 
 
-<style>
-  body {
-    background-image: url('https://wallpapercave.com/wp/wp2757874.gif');
-    background-size: cover;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-  }
-</style>
+  <head>
+    <meta charset="utf-8">
+    <title>LUCKY RANDOM</title>
+  </head>
 
-
-<style>
-  h1 {
-    color: 99CDFF;
-  }
-
-  h2 {
-    color: 99CDFF;
-  }
-</style>
-
-
-<style>
-  input[type=text] {
-    width: 15%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    background-color: #404040;
-    color: white;
-    border: 1px solid #BF0B3B;
-    border-radius: 4px;
-    font-size: 20px;
-  }
-</style>
-
-
-<br><br><br><br><br><br><br><br><br><br>
-
-
-<center>
-  <script>
-    var values = [];
-
-    function addRecord() {
-      var inp = document.getElementById('inputtext'); //แปลงก่อนใส่array
-      values.push(inp.value); //ใส่array
-      inp.value = ""; //กรอกข้อมูลแล้วเมื่อ add จะบข้อมูลนั้น
+  <style>
+    .button {
+      border-radius: 12px;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 8%;
     }
 
-    function displayRecord() {
-      document.getElementById("data").innerHTML = values+"," //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
-                                                 //values.join(", ");
+    .button1:active {
+      background-color: #6B67FF;
+      box-shadow: 0 5px #0030B3;
+      transform: translateY(4px);
+      width: 9%;
     }
 
-    function reset() {
-      values = [];
-      document.getElementById("data").innerHTML = " ";
+    .button2:active {
+      background-color: #FF7230;
+      box-shadow: 0 5px #B34410;
+      transform: translateY(4px);
+      width: 9%;
     }
-  </script>
 
-
-  <table>
-    <center>
-      <h1>LUCKY RANDOM</h1>
-      <input type="text" id="inputtext" placeholder="ใส่ข้อมูล...." />
-      <br><br>
-      <!ช่องกรอกข้อมูล>
-    </center>
-    <button type="button" class="button button1" onclick="addRecord();">Add </button>
-    <button type="button" class="button button2" onclick="displayRecord();">Display</button>
-    <button type="button" class="button button4" onclick="reset();">clear</button>
-  </table>
-  <h1 id='data'></h1>
-
-
-
-</center>
-<br><br>
-
-
-<center>
-  <button type="button" class="button button3" onclick="random()">Random</button>
-  <script>
-    function random() {
-      document.getElementById("printans").innerHTML = values[Math.floor(Math.random() * values.length)]
+    .button3:active {
+      background-color: #6CFF69;
+      box-shadow: 0 5px #70FFBB;
+      transform: translateY(4px);
+      width: 9%;
     }
-  </script>
-  <h2 id="printans"></h2>
-</center>
+
+    .button4:active {
+      background-color: #E7E84C;
+      box-shadow: 0 5px #FBFF87;
+      transform: translateY(4px);
+      width: 9%;
+    }
+
+    .button1 {
+      background-color: #0294A5;
+    }
+
+    .button2 {
+      background-color: #F4874B;
+    }
+
+    .button3 {
+      background-color: #0ABDA0;
+    }
+
+    .button4 {
+      background-color: #FFDF00;
+    }
+  </style>
+
+
+  <style>
+    body {
+      background-image: url('https://wallpapercave.com/wp/wp2757874.gif');
+      background-size: cover;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+
+
+  <style>
+    h1 {
+      color: 99CDFF;
+    }
+
+    h2 {
+      color: 99CDFF;
+    }
+  </style>
+
+
+  <style>
+    input[type=text] {
+      width: 15%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #404040;
+      color: white;
+      border: 1px solid #BF0B3B;
+      border-radius: 4px;
+      font-size: 20px;
+    }
+  </style>
+
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+
+  <center>
+    <script>
+      var values = [];
+
+      function addRecord() {
+        var inp = document.getElementById('inputtext'); //แปลงก่อนใส่array
+        values.push(inp.value); //ใส่array
+        inp.value = ""; //กรอกข้อมูลแล้วเมื่อ add จะบข้อมูลนั้น
+      }
+
+      function displayRecord() {
+        document.getElementById("data").innerHTML = values + "," //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
+        //values.join(", ");
+      }
+
+      function reset() {
+        values = [];
+        document.getElementById("data").innerHTML = " ";
+      }
+    </script>
+
+
+    <table>
+      <center>
+        <h1>LUCKY RANDOM</h1>
+        <input type="text" id="inputtext" placeholder="ใส่ข้อมูล...." />
+        <br><br>
+        <!ช่องกรอกข้อมูล>
+      </center>
+      <button type="button" class="button button1" onclick="addRecord();">Add </button>
+      <button type="button" class="button button2" onclick="displayRecord();">Display</button>
+      <button type="button" class="button button4" onclick="reset();">clear</button>
+    </table>
+    <h1 id='data'></h1>
+
+
+
+  </center>
+  <br><br>
+
+
+  <center>
+    <button type="button" class="button button3" onclick="random()">Random</button>
+    <script>
+      function random() {
+        document.getElementById("printans").innerHTML = values[Math.floor(Math.random() * values.length)]
+      }
+    </script>
+    <h2 id="printans"></h2>
+  </center>
 
 
 </body>
+
+</html>
