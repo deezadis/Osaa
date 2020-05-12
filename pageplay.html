@@ -128,12 +128,15 @@
       }
 
       function undisplayRecord() {
-        document.getElementById("data").innerHTML = " ";
+        var temporary = values;
+        values = [];
+        document.getElementById("data").innerHTML = values.join(" ");;
+        values = temporary
       }
 
       function reset() {
         values = [];
-        document.getElementById("data").innerHTML = " ";
+        document.getElementById("data").innerHTML = values.join(" ");;
       }
     </script>
 
