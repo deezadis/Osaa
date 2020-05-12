@@ -17,7 +17,7 @@
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 20px;
+      font-size: 15px;
       margin: 4px 2px;
       cursor: pointer;
       width: 8%;
@@ -42,6 +42,7 @@
       box-shadow: 0 5px #70FFBB;
       transform: translateY(4px);
       width: 9%;
+
     }
 
     .button4:active {
@@ -117,11 +118,11 @@
       function addRecord() {
         var inp = document.getElementById('inputtext'); //แปลงก่อนใส่array
         values.push(inp.value); //ใส่array
-        inp.value = ""; //กรอกข้อมูลแล้วเมื่อ add จะบข้อมูลนั้น
+        inp.value = " "; //กรอกข้อมูลแล้วเมื่อ add จะบข้อมูลนั้น
       }
 
       function displayRecord() {
-        document.getElementById("data").innerHTML = values + "  " //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
+        document.getElementById("data").innerHTML = values.join("       "); //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
         //values.join(", ");
       }
 
