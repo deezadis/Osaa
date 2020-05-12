@@ -122,8 +122,13 @@
       }
 
       function displayRecord() {
-        document.getElementById("data").innerHTML = values.join("       "); //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
+
+        document.getElementById("data").innerHTML = values.join(" "); //แสดงค่าออกมาเพื่อเช็กทางหน้าจอ
         //values.join(", ");
+      }
+
+      function undisplayRecord() {
+        document.getElementById("data").innerHTML = " ";
       }
 
       function reset() {
@@ -142,10 +147,10 @@
       </center>
       <button type="button" class="button button1" onclick="addRecord();">Add </button>
       <button type="button" class="button button2" onclick="displayRecord();">Display</button>
+      <button type="button" class="button button2" onclick="undisplayRecord();">Close</button>
       <button type="button" class="button button4" onclick="reset();">clear</button>
     </table>
-    <h1 id='data'></h1>
-
+    <pre><h1 id='data'></h1>
 
 
   </center>
